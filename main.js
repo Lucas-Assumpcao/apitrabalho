@@ -77,3 +77,10 @@ fetch('https://hp-api.onrender.com/api/characters')
     console.error('Erro ao carregar personagens:', error);
     alert('Erro ao carregar personagens.');
   });    
+
+  // quando nao tem foto do personagem, exibe uma imagem padrão
+  image.addEventListener('error', () => {
+    image.src = CanvasGradient.jpg; // Substitua 'default-image.jpg' pelo caminho da sua imagem padrão
+    image.alt = 'Imagem não disponível'; 
+    
+  });
