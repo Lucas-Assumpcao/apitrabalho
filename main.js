@@ -62,3 +62,18 @@ function displayCharacter(character) {
   details[2].textContent = `Linhagem: ${character.ancestry || 'N/A'}`;
   details[3].textContent = `Casa: ${character.house || 'N/A'}`;
 }
+
+// Carrega todos os personagens para navegação
+fetch('https://hp-api.onrender.com/api/characters')
+  .then(response => response.json())
+  .then(data => {
+    characters = data;
+    if (characters.length > 0) {
+      currentIndex = 0;
+      displayCharacter(characters[currentIndex]);
+    }
+  })
+  .catch(error => {
+    console.error('Erro ao carregar personagens:', error);
+    alert('Erro ao carregar personagens.');
+  });    
