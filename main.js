@@ -80,7 +80,7 @@ fetch('https://hp-api.onrender.com/api/characters')
 
   // quando nao tem foto do personagem, exibe uma imagem padrão
   image.addEventListener('error', () => {
-    image.src = 'default-image.jpg'; // Substitua 'default-image.jpg' pelo caminho da sua imagem padrão
-    image.alt = 'Imagem não disponível'; 
+    image.src = 'cage.jpg'; //
+    image.alt = 'Imagem não disponível';
 
   });
