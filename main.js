@@ -19,6 +19,8 @@ searchButton.addEventListener('click', () => {
         return;
       }
 
+  
+
       title.textContent = character.name;
       image.src = character.image || '';
       image.alt = character.name;
