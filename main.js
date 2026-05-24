@@ -11,7 +11,12 @@ searchButton.addEventListener('click', () => {
   }
 
     fetch('https://hp-api.onrender.com/api/characters')
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Erro HTTP ${response.status}`);
+      }
+      return response.json();
+    })
     .then(data => {
       const character = data.find(item => item.name.toLowerCase() === name.toLowerCase());
       if (!character) {
@@ -67,7 +72,12 @@ function displayCharacter(character) {
 
 // Carrega todos os personagens para navegação
 fetch('https://hp-api.onrender.com/api/characters')
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Erro HTTP ${response.status}`);
+    }
+    return response.json();
+  })
   .then(data => {
     characters = data;
     if (characters.length > 0) {
