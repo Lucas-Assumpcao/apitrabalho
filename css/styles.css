@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #eef4ff, #f7f8fa 55%);
+  color: #1f2937;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: #ffffffee;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+header div:nth-child(2) {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+header div:last-child {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+header input,
+header button {
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  font: inherit;
+}
+
+header input {
+  min-width: 220px;
+  flex: 1;
+  background: #f8fafc;
+}
+
+header button {
+  background: #2563eb;
+  color: white;
+  border-color: transparent;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+header button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+main {
+  max-width: 960px;
+  margin: 1.5rem auto;
+  padding: 0 1rem 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin: 1.2rem 0 1.5rem;
+  font-size: clamp(2rem, 2.5vw, 2.6rem);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.box {
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 1.4rem;
+  border-radius: 1rem;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.85rem;
+  object-fit: cover;
+  aspect-ratio: 4 / 5;
+}
+
+.box p {
+  margin: 0.85rem 0 0;
+  line-height: 1.8;
+  color: #334155;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+button {
+  border: none;
+  background: #f1f5f9;
+  color: #1e293b;
+  padding: 0.85rem 1.1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 700px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  header {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  header div:last-child {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+  }
+  header input {
+    flex: 1;
+  }
+}

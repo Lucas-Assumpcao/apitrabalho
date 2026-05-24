@@ -92,7 +92,7 @@ fetch('https://hp-api.onrender.com/api/characters')
 
   // quando nao tem foto do personagem, exibe uma imagem padrão
   image.addEventListener('error', () => {
-    image.src = 'cage.jpg'; //
+  image.src = '../assets/cage.jpg';
     image.alt = 'Imagem não disponível';
 
   });
