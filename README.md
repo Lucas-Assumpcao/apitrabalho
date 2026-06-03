@@ -32,4 +32,4 @@ Aplicação web simples que busca personagens da API pública do Harry Potter e 
 ## Observações
 
 - O projeto depende de uma conexão com internet para acessar a API.
-- A busca é sensível apenas ao conteúdo do nome; espaços e diferenças de caixa não impedem a pesquisa.
+- A busca é sensível apenas ao conteúdo do nome, espaços e diferenças de caixa não impedem a pesquisa.

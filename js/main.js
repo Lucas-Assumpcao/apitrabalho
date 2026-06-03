@@ -90,7 +90,6 @@ fetch('https://hp-api.onrender.com/api/characters')
     alert('Erro ao carregar personagens.');
   });    
 
-  // quando nao tem foto do personagem, exibe uma imagem padrão
   image.addEventListener('error', () => {
   image.src = '../assets/cage.jpg';
     image.alt = 'Imagem não disponível';
